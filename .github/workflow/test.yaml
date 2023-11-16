@@ -1,7 +1,8 @@
 name: Group CI
 
 on:
-  
+  push:
+
 jobs:
   lint:
     name: Linters and TypeCheck
