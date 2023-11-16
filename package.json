@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "stylelint": "npx stylelint '**/*.css' --custom-formatter=node_modules/stylelint-actions-formatters"
+    "stylelint": "npx stylelint '**/*.css' --formatter github"
   },
   "dependencies": {
     "next": "14.0.2",

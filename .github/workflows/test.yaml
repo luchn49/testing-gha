@@ -23,7 +23,7 @@ jobs:
           #   run: |
           #     echo "::add-matcher::./.github/stylelintMatcher.json"
 
-      - uses: xt0rted/stylelint-problem-matcher@v1
+      # - uses: xt0rted/stylelint-problem-matcher@v1
 
       - name: Install dependencies
         run: |
