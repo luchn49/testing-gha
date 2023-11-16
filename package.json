@@ -22,7 +22,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.2",
     "postcss": "^8",
-    "stylelint": "14.1.0",
+    "stylelint": "14.10.0",
     "stylelint-config-prettier": "9.0.3",
     "stylelint-config-rational-order": "0.1.2",
     "stylelint-declaration-strict-value": "1.8.0",

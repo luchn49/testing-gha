@@ -19,17 +19,14 @@ jobs:
         with:
           node-version: 20
 
-          # - name: Add problem matchers
-          #   run: |
-          #     echo "::add-matcher::./.github/stylelintMatcher.json"
-
-      # - uses: xt0rted/stylelint-problem-matcher@v1
-
       - name: Install dependencies
         run: |
           yarn install --frozen-lockfile
 
+      # - name: Add matcher
+      #   run: |
+      #     echo "::add-matcher::./.github/stylelintMatcher.json"
+
       - name: Stylelint
         run: |
-          yarn stylelint --formatter \
-          | ruby -pe 'sub(/^(.+):(\d+):(\d+): (.+) \[(.+)\]$/, %q{::\5 file=\1,line=\2,col=\3::\4})'
+          yarn stylelint --formatter github
