@@ -2696,6 +2696,17 @@ styled-jsx@5.1.1:
   dependencies:
     client-only "0.0.1"
 
+stylelint-actions-formatters@^15.9.0:
+  version "15.9.0"
+  resolved "https://registry.yarnpkg.com/stylelint-actions-formatters/-/stylelint-actions-formatters-15.9.0.tgz#35f9468247294295aff6fb06a837c079b131fca7"
+  integrity sha512-6o2aQJ8IVT0o9VVTXsWmQqc/rTT3Buex8reWkij/ELr6W/JLT6L8faaFUgB3mlkIitS9nCteQtpKWpTs6YStiw==
+  dependencies:
+    is-plain-object "^5.0.0"
+    picocolors "^1.0.0"
+    string-width "^4.2.3"
+    supports-hyperlinks "^3.0.0"
+    table "^6.8.1"
+
 stylelint-config-recommended@^13.0.0:
   version "13.0.0"
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-13.0.0.tgz#c48a358cc46b629ea01f22db60b351f703e00597"

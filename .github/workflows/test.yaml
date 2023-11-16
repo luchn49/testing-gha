@@ -17,16 +17,17 @@ jobs:
       - name: Setup Node and install dependencies
         uses: actions/setup-node@v3
         with:
-          node-version: "20.9.0"
-          cache: "yarn"
+          node-version: 20
+
+          # - name: Add problem matchers
+          #   run: |
+          #     echo "::add-matcher::./.github/stylelintMatcher.json"
+
+      - uses: xt0rted/stylelint-problem-matcher@v1
 
       - name: Install dependencies
         run: |
           yarn install --frozen-lockfile
-
-      - name: Add problem matchers
-        run: |
-          echo "::add-matcher::./.github/stylelintMatcher.json"
 
       - name: Stylelint
         run: |
