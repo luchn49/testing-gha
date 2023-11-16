@@ -18,15 +18,17 @@ jobs:
       - name: Setup Node and install dependencies
         uses: actions/setup-node@v3
         with:
-          node-version: '20.9.0'
-          cache: 'yarn'
-        run: yarn install --frozen-lockfile
+          node-version: "20.9.0"
+          cache: "yarn"
+
+      - name: Install dependencies
+        run: |
+          yarn install --frozen-lockfile
 
       - name: Add problem matchers
         run: |
           echo "::add-matcher::./.github/stylelintMatcher.json"
 
       - name: Stylelint
-        # if: ${{ !!env.STYLELINT_PARAMS }}
         run: |
-          yarn lint --styles --p next
+          yarn stylelint
