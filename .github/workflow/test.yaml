@@ -1,0 +1,31 @@
+name: Group CI
+
+on:
+  
+jobs:
+  lint:
+    name: Linters and TypeCheck
+    timeout-minutes: 60
+    runs-on:
+      group: Javascript
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - name: Setup Node and install dependencies
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.9.0'
+          cache: 'yarn'
+        run: yarn install --frozen-lockfile
+
+      - name: Add problem matchers
+        run: |
+          echo "::add-matcher::./.github/stylelintMatcher.json"
+
+      - name: Stylelint
+        # if: ${{ !!env.STYLELINT_PARAMS }}
+        run: |
+          yarn lint --styles --p next
