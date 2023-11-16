@@ -7,8 +7,7 @@ jobs:
   lint:
     name: Linters and TypeCheck
     timeout-minutes: 60
-    runs-on:
-      group: Javascript
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
