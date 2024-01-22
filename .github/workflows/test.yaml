@@ -26,5 +26,8 @@ jobs:
 
       - name: Version bump
         run: |
+          git config user.name "luchn49"
+          git config user.email "luchn49@gmail.com"
+
           yarn version --patch
           git push --tags
