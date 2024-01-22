@@ -24,10 +24,7 @@ jobs:
         run: |
           yarn install --frozen-lockfile
 
-      - name: Add problem matchers
+      - name: Version bump
         run: |
-          echo "::add-matcher::./.github/stylelintMatcher.json"
-
-      - name: Stylelint
-        run: |
-          yarn stylelint
+          yarn version --patch
+          git push --tags
